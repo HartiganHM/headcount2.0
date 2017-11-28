@@ -22,7 +22,11 @@ export default class DistrictRepository {
         }, {})
     }
 
-    findAllMatches() {
-        
+    findAllMatches(string) {
+        if (string) {
+            return Object.keys(this.data).filter( (district) => {
+                return district.toUpperCase().includes(string.toUpperCase());
+            })
+        }
     }
 }
