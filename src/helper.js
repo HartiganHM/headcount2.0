@@ -38,4 +38,16 @@ export default class DistrictRepository {
         
         return this.data[district]
     }
+  
+      findAllMatches(string = '') {
+        const keys = Object.keys(this.data);
+
+        return keys.reduce( (filteredDistricts, district) => {
+            if (district.toUpperCase().includes(string.toUpperCase())) {
+                filteredDistricts.push(this.data[district])
+            }
+
+            return filteredDistricts
+        }, [])
+    }
 }
