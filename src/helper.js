@@ -25,10 +25,12 @@ export default class DistrictRepository {
     findAllMatches(string = '') {
         const keys = Object.keys(this.data);
 
-        return keys.filter( (district) => {
+        return keys.reduce( (filteredDistricts, district) => {
             if (district.toUpperCase().includes(string.toUpperCase())) {
-                return this.data[district]
+                filteredDistricts.push(this.data[district])
             }
-        })
+
+            return filteredDistricts
+        }, [])
     }
 }
