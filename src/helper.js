@@ -28,22 +28,20 @@ export default class DistrictRepository {
             return undefined;
         }
 
-        const district = Object.keys(this.data).find( district => {
-            return district === input.toUpperCase();
-        })
+        const district = Object.keys(this.data).find( district => district === input.toUpperCase())
 
         if (!district) {
             return undefined
         }
-        
+
         return this.data[district]
     }
-  
+
       findAllMatches(string = '') {
         const keys = Object.keys(this.data);
 
         return keys.reduce( (filteredDistricts, district) => {
-            if (district.toUpperCase().includes(string.toUpperCase())) {
+            if (district.includes(string.toUpperCase())) {
                 filteredDistricts.push(this.data[district])
             }
 
