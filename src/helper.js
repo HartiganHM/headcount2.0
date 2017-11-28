@@ -22,15 +22,13 @@ export default class DistrictRepository {
         }, {})
     }
 
-    findAllMatches(string) {
+    findAllMatches(string = '') {
         const keys = Object.keys(this.data);
 
-        if (string) {
-            return keys.filter( (district) => {
-                return district.toUpperCase().includes(string.toUpperCase());
-            })
-        }
-
-        return keys;
+        return keys.filter( (district) => {
+            if (district.toUpperCase().includes(string.toUpperCase())) {
+                return this.data[district]
+            }
+        })
     }
 }
