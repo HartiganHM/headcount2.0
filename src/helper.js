@@ -21,4 +21,8 @@ export default class DistrictRepository {
             return newData;
         }, {})
     }
+
+    findAllMatches() {
+        
+    }
 }
