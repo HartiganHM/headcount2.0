@@ -43,7 +43,7 @@ export default class DistrictRepository {
         const keys = Object.keys(this.data);
 
         return keys.reduce( (filteredDistricts, district) => {
-            if (district.toUpperCase().includes(string.toUpperCase())) {
+            if (district.includes(string.toUpperCase())) {
                 filteredDistricts.push(this.data[district])
             }
 
