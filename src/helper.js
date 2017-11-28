@@ -28,5 +28,7 @@ export default class DistrictRepository {
                 return district.toUpperCase().includes(string.toUpperCase());
             })
         }
+
+        return Object.keys(this.data);
     }
 }
