@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../../src/App';
+import App from './App';
 import { shallow, mount, render } from 'enzyme';
-import importedData from '../../data/kindergartners_in_full_day_program.js'
+// import importedData from '../../data/kindergartners_in_full_day_program.js'
 
 // import { configure } from 'enzyme';
 // import Adapter from 'enzyme-adapter-react-15';
