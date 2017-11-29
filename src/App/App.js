@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   render() {
-    
+
     return (
       <div>
         <span>Headcount 2.0</span>
