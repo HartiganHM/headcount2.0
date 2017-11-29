@@ -9,12 +9,14 @@ class App extends Component {
     this.state = {
       data: {}
     }
+  }
 
-    this.helper = new DistrictRepository(schoolData);
+  componentDidMount() {
+    let data = new DistrictRepository(schoolData);
+    this.setState({data})
   }
 
   render() {
-    console.log(this.helper)
     return (
       <div>Welcome To Headcount 2.0</div>
     );
