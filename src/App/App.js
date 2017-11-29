@@ -18,7 +18,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>Welcome To Headcount 2.0</div>
+      <div>
+        <span>Headcount 2.0</span>
+        <Search />
+        <CardContainer />
+        <footer>Developed by Matt Renn and Hugh Hartigan</footer>
+      </div>
     );
   }
 }
