@@ -3,7 +3,11 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
-    data={Object {}}
+    data={
+        Object {
+            "2007": 0.88,
+          }
+    }
     district="place" />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -17,10 +21,70 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": "Card",
+      "children": Array [
+        <span>
+          place
+</span>,
+        <ul>
+          <li>
+                    2007
+                    : 
+                    0.88
+          </li>
+</ul>,
+      ],
     },
     "ref": null,
-    "rendered": "Card",
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "place",
+        },
+        "ref": null,
+        "rendered": "place",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li>
+              2007
+              : 
+              0.88
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "2007",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "2007",
+                ": ",
+                0.88,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              "2007",
+              ": ",
+              0.88,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -29,10 +93,70 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": "Card",
+        "children": Array [
+          <span>
+            place
+</span>,
+          <ul>
+            <li>
+                        2007
+                        : 
+                        0.88
+            </li>
+</ul>,
+        ],
       },
       "ref": null,
-      "rendered": "Card",
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "place",
+          },
+          "ref": null,
+          "rendered": "place",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li>
+                2007
+                : 
+                0.88
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "2007",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "2007",
+                  ": ",
+                  0.88,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "2007",
+                ": ",
+                0.88,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
       "type": "div",
     },
   ],
