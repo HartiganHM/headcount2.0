@@ -13,4 +13,8 @@ describe('Card Container Tests', () => {
     it('CardContainer should exist', () => {
         expect(renderedCardContainer).toBeDefined();
     });
+
+    it('CardContainer should match the snapshot', () => {
+        expect(renderedCardContainer).toMatchSnapshot();
+    });
 })
