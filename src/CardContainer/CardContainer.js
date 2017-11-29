@@ -12,7 +12,7 @@ const CardContainer = ({ data }) => {
       );
     });
 
-    return <div>{allCards}</div>;
+    return <div className='card-container'>{allCards}</div>;
   }
   return null;
 };

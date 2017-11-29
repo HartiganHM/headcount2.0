@@ -12,9 +12,9 @@ const Card = ({ district, data }) => {
   });
 
   return (
-    <div>
-      <span>{district}</span>
-      <ul>{districtData}</ul>
+    <div className='card'>
+      <span className='district-name'>{district}</span>
+      <ul className='district-data'>{districtData}</ul>
     </div>
   );
 };
