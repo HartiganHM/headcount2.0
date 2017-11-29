@@ -22,11 +22,11 @@ class App extends Component {
   render() {
 
     return (
-      <div>
-        <span>Headcount 2.0</span>
+      <div className='app'>
+        <span className='header'>Headcount 2.0</span>
         <Search />
         <CardContainer data={this.state.data} />
-        <footer>Developed by Matt Renn and Hugh Hartigan</footer>
+        <footer className='footer'>Developed by Matt Renn and Hugh Hartigan</footer>
       </div>
     );
   }
