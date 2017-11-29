@@ -1,51 +1,42 @@
 export default class DistrictRepository {
-    constructor(data) {
-        this.data = this.cleanData(data);
-    }
+  constructor(data) {
+    this.data = this.cleanData(data);
+  }
 
-    cleanData(data) {
-        return data.reduce( (cleanData, object) => {
-            const district = object.Location.toUpperCase();
-            const year = object.TimeFrame;
+  cleanData(data) {
+    return data.reduce((cleanData, object) => {
+      const district = object.Location.toUpperCase();
+      const year = object.TimeFrame;
 
-            if(!cleanData[district]) {
-                cleanData[district] = {
-                    location: district,
-                    data: {}
-                }
-            }
+      if (!cleanData[district]) {
+        cleanData[district] = {
+          location: district,
+          data: {}
+        };
+      }
 
-            if(!cleanData[district].data[year]) {
-                cleanData[district].data[year] = Math.round(object.Data * 1000)/1000 || 0;
-            }
+      if (!cleanData[district].data[year]) {
+        cleanData[district].data[year] =
+          Math.round(object.Data * 1000) / 1000 || 0;
+      }
 
-            return cleanData;
-        }, {})
-    }
+      return cleanData;
+    }, {});
+  }
 
-    findByName(input) {
-        if (!input) {
-            return undefined;
-        }
+  findByName(input = '') {
+    return this.data[input.toUpperCase()];
+  }
 
-        const district = Object.keys(this.data).find( district => district === input.toUpperCase())
+  findAllMatches(string = '') {
+    const keys = Object.keys(this.data);
 
-        if (!district) {
-            return undefined
-        }
+    return keys.reduce((filteredDistricts, district) => {
+      if (district.includes(string.toUpperCase())) {
+        filteredDistricts.push(this.data[district]);
+      }
 
-        return this.data[district]
-    }
-
-      findAllMatches(string = '') {
-        const keys = Object.keys(this.data);
-
-        return keys.reduce( (filteredDistricts, district) => {
-            if (district.includes(string.toUpperCase())) {
-                filteredDistricts.push(this.data[district])
-            }
-
-            return filteredDistricts
-        }, [])
-    }
+      return filteredDistricts;
+    }, []);
+  }
 }
