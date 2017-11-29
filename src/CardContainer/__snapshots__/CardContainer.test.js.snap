@@ -2,7 +2,12 @@ exports[`Card Container Tests CardContainer should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <CardContainer />,
+  Symbol(enzyme.__unrendered__): <CardContainer
+    data={
+        Object {
+            "data": Object {},
+          }
+    } />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -15,36 +20,10 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <span>
-          I\'m the card container, bruh
-</span>,
-        <Card />,
-      ],
+      "children": Array [],
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "I\'m the card container, bruh",
-        },
-        "ref": null,
-        "rendered": "I\'m the card container, bruh",
-        "type": "span",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {},
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
-      },
-    ],
+    "rendered": Array [],
     "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
@@ -53,36 +32,10 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "host",
       "props": Object {
-        "children": Array [
-          <span>
-            I\'m the card container, bruh
-</span>,
-          <Card />,
-        ],
+        "children": Array [],
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "I\'m the card container, bruh",
-          },
-          "ref": null,
-          "rendered": "I\'m the card container, bruh",
-          "type": "span",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
+      "rendered": Array [],
       "type": "div",
     },
   ],

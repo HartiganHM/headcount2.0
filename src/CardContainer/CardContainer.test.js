@@ -5,9 +5,11 @@ import { shallow, mount, render } from 'enzyme';
 
 describe('Card Container Tests', () => {
     let renderedCardContainer;
+    let data;
 
     beforeEach( () => {
-        renderedCardContainer = shallow(<CardContainer />)
+        data = {data: {}}
+        renderedCardContainer = shallow(<CardContainer data={data}/>)
     });
 
     it('CardContainer should exist', () => {
