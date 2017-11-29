@@ -2,12 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { shallow, mount, render } from 'enzyme';
-// import importedData from '../../data/kindergartners_in_full_day_program.js'
-
-// import { configure } from 'enzyme';
-// import Adapter from 'enzyme-adapter-react-15';
-
-// configure({ adapter: new Adapter() });
+import importedData from '../../data/kindergartners_in_full_day_program.js';
 
 describe('App Tests', () => {
 
@@ -27,6 +22,8 @@ describe('App Tests', () => {
 
     it('Should have default state', () => {
         const defaultState = {};
+
+        renderedApp.state().data = defaultState;
         expect(renderedApp.state().data).toEqual(defaultState);
     });
 
