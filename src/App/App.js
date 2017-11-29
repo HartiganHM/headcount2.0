@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import DistrictRepository from './helper'
-import schoolData from '../data/kindergartners_in_full_day_program.js'
+import DistrictRepository from '../helper'
+import schoolData from '../../data/kindergartners_in_full_day_program.js'
 import './App.css';
+
+import Search from '../Search/Search';
+import CardContainer from '../CardContainer/CardContainer';
 
 class App extends Component {
   constructor() {
