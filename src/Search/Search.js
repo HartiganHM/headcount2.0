@@ -9,7 +9,10 @@ class Search extends Component {
 
     render() {
         return (
-            <div>Get at me, search!</div>
+            <div>
+                <input type='text' placeholder='Search for a district'/>
+                <button>Search</button>
+            </div>
         )
     }
 }
