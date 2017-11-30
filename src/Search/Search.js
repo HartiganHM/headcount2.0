@@ -4,13 +4,23 @@ import './Search.css';
 class Search extends Component {
     constructor() {
         super();
-        this.state = {}
+        this.state = {
+            value: ''
+        }
     }
 
-    render() {
+    handleChange() {
+        console.log('butt')
+    }
+
+    render({ filterCards }) {
         return (
             <div>
-                <input type='text' placeholder='Search for a district'/>
+                <input
+                    type='text'
+                    placeholder='Search for a district'
+                    value={this.state.value}
+                    onChange={this.handleChange}/>
                 <button>Search</button>
             </div>
         )
