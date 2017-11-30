@@ -7,13 +7,17 @@ class Search extends Component {
         this.state = {
             value: ''
         }
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleChange() {
-        console.log('butt')
+    handleChange(event) {
+        let value = event.target.value;
+        this.props.filterCards(value);
+        this.setState({value})
     }
 
-    render({ filterCards }) {
+    render() {
         return (
             <div>
                 <input
