@@ -17,12 +17,16 @@ export default class DistrictRepository {
 
       if (!cleanData[district].data[year]) {
         cleanData[district].data[year] =
-          Math.round(object.Data * 1000) / 1000 || 0;
+          this.rounder(object.Data) || 0;
       }
 
       return cleanData;
     }, {});
-}
+  }
+
+  rounder(number) {
+    return Math.round(number * 1000) / 1000;
+  }
 
   findByName(input = '') {
     return this.data[input.toUpperCase()];
@@ -38,5 +42,30 @@ export default class DistrictRepository {
 
       return filteredDistricts;
     }, {});
+  }
+
+  findAverage(district) {
+    let data = this.data[district].data;
+    let numberOfYears = Object.keys(data).length;
+    let average = Object.keys(data).reduce( (average, year) => {
+      return average + data[year];
+    }, 0);
+
+    return this.rounder(average / numberOfYears)
+  }
+
+  compareDistrictAverages(district1, district2) {
+    let d1 = district1.toUpperCase();
+    let d2 = district2.toUpperCase();
+
+    let average1 = this.findAverage(d1);
+    let average2 = this.findAverage(d2);
+    let comparedAverage = average1 < average2 ? average1 / average2 : average2 / average1;
+
+    return {
+      [d1]: average1,
+      [d2]: average2,
+      'compared': this.rounder(comparedAverage)
+    }
   }
 }
