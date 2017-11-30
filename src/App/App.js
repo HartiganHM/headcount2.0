@@ -13,7 +13,7 @@ class App extends Component {
       data: {}
     }
 
-    this.helper;
+    this.helper = {};
     this.filterData = this.filterData.bind(this);
   }
 
