@@ -19,13 +19,16 @@ class Search extends Component {
 
     render() {
         return (
-            <div>
+            <div className='search'>
                 <input
+                    className='search-input'
                     type='text'
                     placeholder='Search for a district'
                     value={this.state.value}
                     onChange={this.handleChange}/>
-                <button>Search</button>
+                <img
+                    src=''
+                    className='search-icon' />
             </div>
         )
     }
