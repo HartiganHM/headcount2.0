@@ -18,3 +18,11 @@
     font-size: 0.8rem;
     text-align: left;
 }
+
+.greaterThan {
+    color: blue;
+}
+
+.lessThan {
+    color: red;
+}

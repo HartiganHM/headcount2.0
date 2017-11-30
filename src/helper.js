@@ -22,7 +22,7 @@ export default class DistrictRepository {
 
       return cleanData;
     }, {});
-  }
+}
 
   findByName(input = '') {
     return this.data[input.toUpperCase()];
