@@ -17,9 +17,22 @@ class App extends Component {
   }
 
   filterData(input) {
-    let newData = this.state.data.findAllMatches(input);
+    let data = this.state.data.findAllMatches(input);
 
-    console.log(newData)
+    // newData.forEach( district => console.log(district.location))
+
+    // let data = Object.keys(this.state.data.data).reduce( (data, district) => {
+    //   newData.forEach( (newDistrict) => {
+    //     if (district === newDistrict.location) {
+    //       data[district] = this.state.data.data[district]
+    //     }
+    //   })
+    //   return data
+    // }, {})
+
+    console.log(data)
+
+    // this.setState({data})
   }
 
   componentDidMount() {
