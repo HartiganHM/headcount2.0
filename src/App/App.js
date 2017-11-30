@@ -12,6 +12,14 @@ class App extends Component {
     this.state = {
       data: {}
     }
+
+    this.filterData = this.filterData.bind(this);
+  }
+
+  filterData(input) {
+    let newData = this.state.data.findAllMatches(input);
+
+    console.log(newData)
   }
 
   componentDidMount() {
@@ -23,7 +31,7 @@ class App extends Component {
     return (
       <div className='app'>
         <span className='header'>Headcount 2.0</span>
-        <Search filterCards={this.data.findByName}/>
+        <Search filterCards={this.filterData}/>
         <CardContainer data={this.state.data} />
         <footer className='footer'>Developed by Matt Renn and Hugh Hartigan</footer>
       </div>
