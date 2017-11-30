@@ -4,9 +4,9 @@ import Card from '../Card/Card';
 import './CardContainer.css';
 
 const CardContainer = ({ data }) => {
-  if (data.data) {
-    const allCards = Object.keys(data.data).map(district => {
-      const dist = data.data[district];
+  if (data) {
+    const allCards = Object.keys(data).map(district => {
+      const dist = data[district];
       return (
         <Card district={dist.location} data={dist.data} key={dist.location} />
       );

@@ -18,6 +18,7 @@ class App extends Component {
 
   filterData(input) {
     let data = this.state.data.findAllMatches(input);
+    // let data = this.state.data.data
 
     // newData.forEach( district => console.log(district.location))
 
@@ -30,14 +31,15 @@ class App extends Component {
     //   return data
     // }, {})
 
+    console.log(this.state.data.findAllMatches(input))
     console.log(data)
 
-    // this.setState({data})
+    this.setState({data})
   }
 
   componentDidMount() {
     let data = new DistrictRepository(schoolData);
-    this.setState({data})
+    this.setState({data: data.data})
   }
 
   render() {
