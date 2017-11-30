@@ -13,6 +13,7 @@ class App extends Component {
       data: {}
     }
 
+    this.helper;
     this.filterData = this.filterData.bind(this);
   }
 
@@ -38,8 +39,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    let data = new DistrictRepository(schoolData);
-    this.setState({data: data.data})
+    this.helper = new DistrictRepository(schoolData);
+    this.setState({ data: this.helper.data })
   }
 
   render() {
