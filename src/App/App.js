@@ -12,19 +12,26 @@ class App extends Component {
     this.state = {
       data: {}
     }
+
+    this.helper = {};
+    this.filterData = this.filterData.bind(this);
   }
 
-  componentDidMount() {
-    let data = new DistrictRepository(schoolData);
+  filterData(input) {
+    let data = this.helper.findAllMatches(input);
     this.setState({data})
   }
 
-  render() {
+  componentDidMount() {
+    this.helper = new DistrictRepository(schoolData);
+    this.setState({ data: this.helper.data })
+  }
 
+  render() {
     return (
       <div className='app'>
         <span className='header'>Headcount 2.0</span>
-        <Search />
+        <Search filterCards={this.filterData}/>
         <CardContainer data={this.state.data} />
         <footer className='footer'>Developed by Matt Renn and Hugh Hartigan</footer>
       </div>

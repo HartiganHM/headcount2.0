@@ -33,10 +33,10 @@ export default class DistrictRepository {
 
     return keys.reduce((filteredDistricts, district) => {
       if (district.includes(string.toUpperCase())) {
-        filteredDistricts.push(this.data[district]);
+        filteredDistricts[district] = this.data[district];
       }
 
       return filteredDistricts;
-    }, []);
+    }, {});
   }
 }
