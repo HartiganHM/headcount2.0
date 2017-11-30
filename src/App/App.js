@@ -20,11 +20,10 @@ class App extends Component {
   }
 
   render() {
-
     return (
       <div className='app'>
         <span className='header'>Headcount 2.0</span>
-        <Search />
+        <Search filterCards={this.data.findByName}/>
         <CardContainer data={this.state.data} />
         <footer className='footer'>Developed by Matt Renn and Hugh Hartigan</footer>
       </div>
