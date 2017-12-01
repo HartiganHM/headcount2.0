@@ -22,17 +22,21 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <span>
+        <span
+          className="district-name">
           place
 </span>,
-        <ul>
-          <li>
+        <ul
+          className="district-data">
+          <li
+                    className="greaterThan">
                     2007
                     : 
                     0.88
           </li>
 </ul>,
       ],
+      "className": "card",
     },
     "ref": null,
     "rendered": Array [
@@ -42,6 +46,7 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": "place",
+          "className": "district-name",
         },
         "ref": null,
         "rendered": "place",
@@ -53,12 +58,14 @@ ShallowWrapper {
         "nodeType": "host",
         "props": Object {
           "children": Array [
-            <li>
+            <li
+              className="greaterThan">
               2007
               : 
               0.88
 </li>,
           ],
+          "className": "district-data",
         },
         "ref": null,
         "rendered": Array [
@@ -72,6 +79,7 @@ ShallowWrapper {
                 ": ",
                 0.88,
               ],
+              "className": "greaterThan",
             },
             "ref": null,
             "rendered": Array [
@@ -94,17 +102,21 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <span>
+          <span
+            className="district-name">
             place
 </span>,
-          <ul>
-            <li>
+          <ul
+            className="district-data">
+            <li
+                        className="greaterThan">
                         2007
                         : 
                         0.88
             </li>
 </ul>,
         ],
+        "className": "card",
       },
       "ref": null,
       "rendered": Array [
@@ -114,6 +126,7 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": "place",
+            "className": "district-name",
           },
           "ref": null,
           "rendered": "place",
@@ -125,12 +138,14 @@ ShallowWrapper {
           "nodeType": "host",
           "props": Object {
             "children": Array [
-              <li>
+              <li
+                className="greaterThan">
                 2007
                 : 
                 0.88
 </li>,
             ],
+            "className": "district-data",
           },
           "ref": null,
           "rendered": Array [
@@ -144,6 +159,7 @@ ShallowWrapper {
                   ": ",
                   0.88,
                 ],
+                "className": "greaterThan",
               },
               "ref": null,
               "rendered": Array [

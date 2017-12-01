@@ -1,10 +1,16 @@
 .search {
-    display: flex;
-    font-size: 1.2rem;
-}
-
-.search-input {
+  align-items: center;
+  display: flex;
+  font-size: 1.2rem;
+  padding: 1rem; }
+  .search .search-input {
     border: 1px solid grey;
-    flex: 5;
-    padding: 0.5rem;
-}
+    flex: 2;
+    padding: 0.5rem; }
+    .search .search-input:focus {
+      outline: none; }
+  .search .search-icon {
+    height: 1.5rem;
+    margin: 1rem;
+    margin-left: 0;
+    width: 1.5rem; }
