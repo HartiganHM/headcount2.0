@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import icon from '../Images/search.svg'
 import './Search.css';
 
 class Search extends Component {
@@ -20,16 +21,16 @@ class Search extends Component {
     render() {
         return (
             <div className='search'>
+                <img
+                    src={icon}
+                    alt='magnifying-glass-icon'
+                    className='search-icon' />
                 <input
                     className='search-input'
                     type='text'
                     placeholder='Search for a district'
                     value={this.state.value}
                     onChange={this.handleChange}/>
-                <img
-                    src=''
-                    alt='magnifying-glass-icon'
-                    className='search-icon' />
             </div>
         )
     }
