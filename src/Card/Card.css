@@ -1,28 +1,23 @@
 .card {
-    align-items: center;
-    border: 1px solid gray;
-    display: flex;
-    flex-direction: column;
-    height: 16rem;
-    padding: 1rem;
-    margin: 1rem;
-    text-align: center;
-    width: 12rem;
-}
+  align-items: center;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  height: 16rem;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  width: 12rem; }
 
 .district-name {
-    font-size: 1.2rem;
-}
+  font-size: 1.2rem; }
 
 .district-data {
-    font-size: 0.8rem;
-    text-align: left;
-}
+  font-size: 0.8rem;
+  text-align: left; }
 
 .greaterThan {
-    color: blue;
-}
+  color: blue; }
 
 .lessThan {
-    color: red;
-}
+  color: red; }
