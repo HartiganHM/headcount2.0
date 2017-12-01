@@ -28,6 +28,7 @@ class Search extends Component {
                     onChange={this.handleChange}/>
                 <img
                     src=''
+                    alt='magnifying-glass-icon'
                     className='search-icon' />
             </div>
         )
