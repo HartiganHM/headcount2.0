@@ -2,27 +2,29 @@
     align-items: center;
     border: 1px solid gray;
     display: flex;
+    flex: 1;
     flex-direction: column;
     height: 16rem;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
-    width: 12rem;
-}
+    max-width: 15rem;
+    min-width: 12rem;
 
-.district-name {
-    font-size: 1.2rem;
-}
+    .district-name {
+        font-size: 1.2rem;
+    }
 
-.district-data {
-    font-size: 0.8rem;
-    text-align: left;
-}
+    .district-data {
+        font-size: 0.8rem;
+        text-align: left;
 
-.greaterThan {
-    color: blue;
-}
+        .greaterThan {
+            color: blue;
+        }
 
-.lessThan {
-    color: red;
+        .lessThan {
+            color: red;
+        }
+    }
 }
