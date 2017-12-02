@@ -1,10 +1,14 @@
+@import '../variables.scss';
+
 .card {
     align-items: center;
     border: 1px solid gray;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.2rem $main-color-dark;
     display: flex;
     flex: 1;
     flex-direction: column;
-    height: 16rem;
+    height: 14rem;
     padding: 1rem;
     margin: 1rem;
     text-align: center;
