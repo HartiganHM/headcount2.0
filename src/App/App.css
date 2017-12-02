@@ -1,2 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700");
 .app {
+  font-family: "Open Sans", sans-serif;
   padding: 1.2rem; }
