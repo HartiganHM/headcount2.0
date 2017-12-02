@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import DistrictRepository from '../helper'
-import schoolData from '../../data/kindergartners_in_full_day_program.js'
+import DistrictRepository from '../helper';
+import schoolData from '../../data/kindergartners_in_full_day_program.js';
 import './App.css';
 
 import Search from '../Search/Search';
@@ -11,7 +11,7 @@ class App extends Component {
     super();
     this.state = {
       data: {}
-    }
+    };
 
     this.helper = {};
     this.filterData = this.filterData.bind(this);
@@ -19,21 +19,24 @@ class App extends Component {
 
   filterData(input) {
     let data = this.helper.findAllMatches(input);
-    this.setState({data})
+
+    this.setState({ data });
   }
 
   componentDidMount() {
     this.helper = new DistrictRepository(schoolData);
-    this.setState({ data: this.helper.data })
+    this.setState({ data: this.helper.data });
   }
 
   render() {
     return (
-      <div className='app'>
-        <span className='header'>Headcount 2.0</span>
-        <Search filterCards={this.filterData}/>
+      <div className="app">
+        <span className="header">Headcount 2.0</span>
+        <Search filterCards={this.filterData} />
         <CardContainer data={this.state.data} />
-        <footer className='footer'>Developed by Matt Renn and Hugh Hartigan</footer>
+        <footer className="footer">
+          Developed by Matt Renn and Hugh Hartigan
+        </footer>
       </div>
     );
   }
