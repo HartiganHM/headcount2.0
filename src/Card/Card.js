@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../fontello-d4ecff93/css/fontello.css';
 import './Card.css';
 
 const Card = ({ district, data, clickFunction, type }) => {
@@ -8,7 +9,7 @@ const Card = ({ district, data, clickFunction, type }) => {
 
     return (
       <li key={year} className={dataClass}>
-        {year}: {data[year]}
+        <span><i className='icon-pencil'></i>{year}: {data[year]}</span>
       </li>
     );
   });

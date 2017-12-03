@@ -24,6 +24,10 @@
     font-size: 0.8rem;
     text-align: left;
     padding: 1rem; }
+    .card .district-data .icon-pencil {
+      height: 0.5rem;
+      margin-right: 0.5rem;
+      margin-left: -1rem; }
     .card .district-data .greaterThan {
       color: #00cc44; }
     .card .district-data .lessThan {

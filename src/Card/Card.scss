@@ -29,6 +29,12 @@
         text-align: left;
         padding: 1rem;
 
+        .icon-pencil {
+            height: 0.5rem;
+            margin-right: 0.5rem;
+            margin-left: -1rem;
+        }
+
         .greaterThan {
             color: $high-score;
         }
