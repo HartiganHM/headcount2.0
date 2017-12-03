@@ -17,9 +17,9 @@ const Comparison = ({ selectedArray, comparedData, removeCard }) => {
 
     return (
         <div className='comparison'>
-            <span className={placeHolder1}>{selectedCards[0] || 'District 1'}</span>
+            <span className={placeHolder1}>{selectedCards[0] || ''}</span>
             <ComparisonCard comparedData={comparedData}/>
-            <span className={placeHolder2}>{selectedCards[1] || 'District 2'}</span>
+            <span className={placeHolder2}>{selectedCards[1] || ''}</span>
         </div>
     )
 }
