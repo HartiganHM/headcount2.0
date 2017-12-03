@@ -9,14 +9,21 @@ const CardContainer = ({ data, selectCard, selectedArray }) => {
 
     const allCards = Object.keys(data).map(district => {
       const dist = data[district];
+      // if (dist.location === selectedArray[0].location || selectedArray[1].location) {
+      //   type = 'card selected'
+      // }
+
       selectedArray.forEach( ( obj ) => {
-        if ( obj.location === dist ) {
+        if ( obj.location === dist.location ) {
+          console.log(obj.location)
           type = 'card selected'
+        } else {
+          type = 'card'
         }
       })
-      
+
       return (
-        <Card district={dist.location} data={dist.data} key={dist.location} selectCard={selectCard} className={type}/>
+        <Card district={dist.location} data={dist.data} key={dist.location} selectCard={selectCard} type={type}/>
       );
     });
 
