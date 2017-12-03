@@ -5,22 +5,20 @@ import './CardContainer.css';
 
 const CardContainer = ({ data, selectCard, selectedArray }) => {
   if (data) {
-    let type = 'card';
+    let type;
 
     const allCards = Object.keys(data).map(district => {
       const dist = data[district];
-      // if (dist.location === selectedArray[0].location || selectedArray[1].location) {
-      //   type = 'card selected'
-      // }
+      let dist1 = selectedArray.length ? selectedArray[0].location : null;
+      let dist2 = selectedArray.length > 1 ? selectedArray[1].location : null;
 
-      selectedArray.forEach( ( obj ) => {
-        if ( obj.location === dist.location ) {
-          console.log(obj.location)
-          type = 'card selected'
-        } else {
-          type = 'card'
-        }
-      })
+      if (selectedArray.length && dist.location === dist1) {
+        type = 'card selected';
+      } else if (selectedArray.length && dist.location === dist2) {
+        type = 'card selected';
+      } else {
+        type = 'card'
+      }
 
       return (
         <Card district={dist.location} data={dist.data} key={dist.location} selectCard={selectCard} type={type}/>
