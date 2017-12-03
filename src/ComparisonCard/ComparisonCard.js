@@ -13,7 +13,7 @@ const ComparisonCard = ({ comparedData }) => {
     const comparison = keys.length ? `${keys[2]}:${data[2]}` : 'District 2';
 
     return(
-        <div>
+        <div className='comparison-card'>
             <span>{district1}</span>
             <span>{comparison}</span>
             <span>{district2}</span>
