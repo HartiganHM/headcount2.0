@@ -4,12 +4,12 @@ import ComparisonCard from '../ComparisonCard/ComparisonCard';
 // import PropTypes from 'prop-types';
 // import './CardContainer.css';
 
-const Comparison = ({ selectedArray, comparedData, selectCard }) => {
+const Comparison = ({ selectedArray, comparedData, removeCard }) => {
     let type = 'card';
 
     const selectedCards = selectedArray.map( (card) => {
         return (
-            <Card district={card.location} data={card.data} key={card.location} selectCard={selectCard} type={type}/>
+            <Card district={card.location} data={card.data} key={card.location} clickFunction={removeCard} type={type}/>
         )
     })
 

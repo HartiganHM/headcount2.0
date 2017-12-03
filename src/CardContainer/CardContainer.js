@@ -25,7 +25,7 @@ const CardContainer = ({ data, selectCard, removeCard, selectedArray }) => {
       }
 
       return (
-        <Card district={dist.location} data={dist.data} key={dist.location} selectCard={clickFunction} type={type}/>
+        <Card district={dist.location} data={dist.data} key={dist.location} clickFunction={clickFunction} type={type}/>
       );
     });
 

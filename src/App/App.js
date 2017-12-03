@@ -65,7 +65,7 @@ class App extends Component {
         <span className="header">Headcount 2.0</span>
         <Comparison
           selectedArray={this.state.selected}
-          selectCard={this.removeCard}
+          removeCard={this.removeCard}
           comparedData={this.state.comparedData}/>
         <Search filterCards={this.filterData} />
         <CardContainer
