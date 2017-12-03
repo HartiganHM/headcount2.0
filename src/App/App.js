@@ -71,6 +71,7 @@ class App extends Component {
         <CardContainer
           data={this.state.data}
           selectCard={this.selectCard}
+          removeCard={this.removeCard}
           selectedArray={this.state.selected}/>
         <footer className="footer">
           Developed by Matt Renn and Hugh Hartigan
