@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../../fontello-d4ecff93/css/fontello.css';
 import './ComparisonCard.css';
 
 const ComparisonCard = ({ comparedData }) => {
@@ -8,15 +9,15 @@ const ComparisonCard = ({ comparedData }) => {
         return comparedData[district]
     })
 
-    const district1 = keys.length ? `${keys[0]}:${data[0]}` : 'District 1';
-    const district2 = keys.length ? `${keys[1]}:${data[1]}` : 'District 2';
-    const comparison = keys.length ? `${keys[2]}:${data[2]}` : 'COMPARISON';
+    const district1 = keys.length ? `${keys[0]}: ${data[0]}` : 'Pick two districts';
+    const district2 = keys.length ? `${keys[1]}: ${data[1]}` : 'to compare statistics';
+    const comparison = keys.length ? `${keys[2]}: ${data[2]}` : '-';
 
     return(
         <div className='comparison-card'>
-            <span>{district1}</span>
-            <span>{comparison}</span>
-            <span>{district2}</span>
+            <span className='district-data'>{district1}</span>
+            <span className='comparison-data'><i className='icon-left-big'></i>{comparison}<i className='icon-right-big'></i></span>
+            <span className='district-data'>{district2}</span>
         </div>
     )
 }
