@@ -6,6 +6,8 @@ import './Comparison.css';
 
 const Comparison = ({ selectedArray, comparedData, removeCard }) => {
     let type = 'card selected';
+    let placeHolder1 = selectedArray[0] ? '' : 'district';
+    let placeHolder2 = selectedArray[1] ? '' : 'district';
 
     const selectedCards = selectedArray.map( (card) => {
         return (
@@ -15,9 +17,9 @@ const Comparison = ({ selectedArray, comparedData, removeCard }) => {
 
     return (
         <div className='comparison'>
-            {selectedCards[0]}
+            <span className={placeHolder1}>{selectedCards[0] || 'District 1'}</span>
             <ComparisonCard comparedData={comparedData}/>
-            {selectedCards[1]}
+            <span className={placeHolder2}>{selectedCards[1] || 'District 2'}</span>
         </div>
     )
 }
