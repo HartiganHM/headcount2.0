@@ -22,7 +22,10 @@ class Search extends Component {
   render() {
     return (
       <div className='search'>
-        <img src={icon} alt='magnifying-glass-icon' className='search-icon' />
+        <img
+          src={icon}
+          alt='magnifying-glass-icon'
+          className='search-icon' />
         <input
           className='search-input'
           type='text'
