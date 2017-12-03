@@ -28,3 +28,7 @@
       color: #00cc44; }
     .card .district-data .lessThan {
       color: #a10000; }
+
+.selected {
+  background-color: rgba(0, 197, 0, 0.37); }
+
