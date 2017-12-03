@@ -16,8 +16,7 @@ export default class DistrictRepository {
       }
 
       if (!cleanData[district].data[year]) {
-        cleanData[district].data[year] =
-          this.rounder(object.Data) || 0;
+        cleanData[district].data[year] = this.rounder(object.Data) || 0;
       }
 
       return cleanData;
@@ -47,11 +46,11 @@ export default class DistrictRepository {
   findAverage(district) {
     let data = this.data[district].data;
     let numberOfYears = Object.keys(data).length;
-    let average = Object.keys(data).reduce( (average, year) => {
+    let average = Object.keys(data).reduce((average, year) => {
       return average + data[year];
     }, 0);
 
-    return this.rounder(average / numberOfYears)
+    return this.rounder(average / numberOfYears);
   }
 
   compareDistrictAverages(district1, district2) {
@@ -60,7 +59,8 @@ export default class DistrictRepository {
 
     let average1 = this.findAverage(d1);
     let average2 = this.findAverage(d2);
-    let comparedAverage = average1 < average2 ? average1 / average2 : average2 / average1;
+    let comparedAverage =
+      average1 < average2 ? average1 / average2 : average2 / average1;
 
     return {
       [d1]: average1,

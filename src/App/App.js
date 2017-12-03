@@ -24,6 +24,7 @@ class App extends Component {
 
   filterData(input) {
     let data = this.helper.findAllMatches(input);
+
     this.setState({ data });
   }
 

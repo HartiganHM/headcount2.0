@@ -5,6 +5,7 @@ import './Card.css';
 const Card = ({ district, data, clickFunction, type }) => {
   const districtData = Object.keys(data).map(year => {
     const dataClass = data[year] > 0.5 ? 'greaterThan' : 'lessThan';
+
     return (
       <li key={year} className={dataClass}>
         {year}: {data[year]}

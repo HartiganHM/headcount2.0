@@ -1,2 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700");
 .app {
-  padding: 1.2rem; }
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans", sans-serif; }
+  .app .header {
+    background-color: #00A79D;
+    color: #FFF;
+    font-family: "Roboto Slab", serif;
+    font-size: 6.4rem;
+    padding: 1.2rem;
+    text-align: center; }

@@ -29,7 +29,7 @@ const CardContainer = ({ data, selectCard, removeCard, selectedArray }) => {
       );
     });
 
-    return <div className='card-container'>{allCards}</div>;
+    return <div className="card-container">{allCards}</div>;
   }
   return null;
 };
