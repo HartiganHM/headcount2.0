@@ -65,7 +65,7 @@ export default class DistrictRepository {
     return {
       [d1]: average1,
       [d2]: average2,
-      'compared': this.rounder(comparedAverage)
+      'COMPARED': this.rounder(comparedAverage)
     }
   }
 }
