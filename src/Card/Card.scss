@@ -25,11 +25,11 @@
         text-align: left;
 
         .greaterThan {
-            color: blue;
+            color: $high-score;
         }
 
         .lessThan {
-            color: red;
+            color: $low-score;
         }
     }
 }
