@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import icon from '../Images/search.svg';
+import icon from '../Icons/search.svg';
 import './Search.css';
 
 class Search extends Component {
