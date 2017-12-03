@@ -5,7 +5,7 @@ import ComparisonCard from '../ComparisonCard/ComparisonCard';
 // import './CardContainer.css';
 
 const Comparison = ({ selectedArray, comparedData, removeCard }) => {
-    let type = 'card';
+    let type = 'card selected';
 
     const selectedCards = selectedArray.map( (card) => {
         return (
