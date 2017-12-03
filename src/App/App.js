@@ -3,6 +3,7 @@ import DistrictRepository from '../helper';
 import schoolData from '../../data/kindergartners_in_full_day_program.js';
 import './App.css';
 
+import Comparison from '../Comparison/Comparison';
 import Search from '../Search/Search';
 import CardContainer from '../CardContainer/CardContainer';
 
@@ -11,12 +12,14 @@ class App extends Component {
     super();
     this.state = {
       data: {},
-      selected: []
+      selected: [],
+      comparedData: {}
     };
 
     this.helper = {};
     this.filterData = this.filterData.bind(this);
     this.selectCard = this.selectCard.bind(this);
+    this.removeCard = this.removeCard.bind(this);
   }
 
   filterData(input) {
@@ -30,26 +33,45 @@ class App extends Component {
   }
 
   selectCard(card) {
-    console.log(this.helper.findByName(card.id))
-    let selectedCard = this.state.data[card.id];
+    let selectedCard = this.state.data[card];
     let selected = [...this.state.selected, selectedCard];
+
     if (this.state.selected.length < 2) {
-      this.setState({ selected });
+      this.setState({ selected }, () => this.compareData());
     }
-    console.log(this.state.selected)
+  }
+
+  removeCard(card) {
+    let clickedCard = this.state.data[card];
+    let selected = this.state.selected.filter( (card) => {
+      return card !== clickedCard
+    })
+    let comparedData = {}
+
+    this.setState({selected, comparedData})
+  }
+
+  compareData() {
+    if (this.state.selected.length === 2) {
+      let comparedData = this.helper.compareDistrictAverages(this.state.selected[0].location, this.state.selected[1].location);
+
+      this.setState({ comparedData })
+    }
   }
 
   render() {
     return (
       <div className="app">
         <span className="header">Headcount 2.0</span>
-        <Search filterCards={this.filterData} />
-        <CardContainer 
-          data={this.state.data}
-          selectCard={this.selectCard} 
+        <Comparison
           selectedArray={this.state.selected}
-          />
-
+          selectCard={this.removeCard}
+          comparedData={this.state.comparedData}/>
+        <Search filterCards={this.filterData} />
+        <CardContainer
+          data={this.state.data}
+          selectCard={this.selectCard}
+          selectedArray={this.state.selected}/>
         <footer className="footer">
           Developed by Matt Renn and Hugh Hartigan
         </footer>
