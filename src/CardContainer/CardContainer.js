@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import Card from '../Card/Card';
 import './CardContainer.css';
 
-const CardContainer = ({ data, selectCard, selectedArray }) => {
+const CardContainer = ({ data, selectCard, removeCard, selectedArray }) => {
   if (data) {
     let type;
+    let clickFunction;
 
     const allCards = Object.keys(data).map(district => {
       const dist = data[district];
@@ -14,14 +15,17 @@ const CardContainer = ({ data, selectCard, selectedArray }) => {
 
       if (selectedArray.length && dist.location === dist1) {
         type = 'card selected';
+        clickFunction = removeCard;
       } else if (selectedArray.length && dist.location === dist2) {
         type = 'card selected';
+        clickFunction = removeCard;
       } else {
-        type = 'card'
+        type = 'card';
+        clickFunction = selectCard;
       }
 
       return (
-        <Card district={dist.location} data={dist.data} key={dist.location} selectCard={selectCard} type={type}/>
+        <Card district={dist.location} data={dist.data} key={dist.location} selectCard={clickFunction} type={type}/>
       );
     });
 
