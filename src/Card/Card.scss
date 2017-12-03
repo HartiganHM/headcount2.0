@@ -1,28 +1,33 @@
 @import '../variables.scss';
 
 .card {
-    align-items: center;
+    align-items: stretch;
     border: 1px solid gray;
     border-radius: 1rem;
     box-shadow: 0.5rem 0.5rem 0.2rem $main-color-dark;
     display: flex;
-    flex: 1;
     flex-direction: column;
-    height: 14rem;
-    padding: 1rem;
+    height: 18rem;
+    overflow: hidden;
     margin: 1rem;
     text-align: center;
     max-width: 12rem;
     min-width: 12rem;
 
     .district-name {
+        color: $white;
+        background-color: $accent-color;
+        box-sizing: border-box;
         font-size: 1.2rem;
         height: 4rem;
+        padding: 1rem;
     }
 
     .district-data {
+        align-self: center;
         font-size: 0.8rem;
         text-align: left;
+        padding: 1rem;
 
         .greaterThan {
             color: $high-score;
