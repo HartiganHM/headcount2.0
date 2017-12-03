@@ -1,6 +1,16 @@
 @import '../variables.scss';
 
 .app {
+    display: flex;
+    flex-direction: column;
     font-family: $main-font;
-    padding: 1.2rem;
+
+    .header {
+        background-color: $accent-color;
+        color: $white;
+        font-family: $accent-font;
+        font-size: 6.4rem;
+        padding: 1.2rem;
+        text-align: center;
+    }
 }
