@@ -2,7 +2,7 @@ import React from 'react';
 import Card from '../Card/Card';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
 // import PropTypes from 'prop-types';
-// import './CardContainer.css';
+import './Comparison.css';
 
 const Comparison = ({ selectedArray, comparedData, removeCard }) => {
     let type = 'card selected';
