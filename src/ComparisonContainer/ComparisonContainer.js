@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '../Card/Card';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import './ComparisonContainer.css';
 
 const ComparisonContainer = ({ selectedArray, comparedData, removeCard }) => {
@@ -23,5 +23,11 @@ const ComparisonContainer = ({ selectedArray, comparedData, removeCard }) => {
         </div>
     )
 }
+
+Card.propTypes = {
+    selectedArray: PropTypes.array,
+    comparedData: PropTypes.object,
+    removeCard: PropTypes.func
+  };
 
 export default ComparisonContainer;
