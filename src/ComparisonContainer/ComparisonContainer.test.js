@@ -30,10 +30,15 @@ describe('ComparisonContainer Tests', () => {
         expect(renderedComparisonContainer.find('Card').length).toEqual(0);
     });
 
-    it('Comparison Container should two Cards if array is full', () => {
+    it('Comparison Container should have one Cards if array is full', () => {
+        mockArray = [ {} ];
+        renderedComparisonContainer = shallow(<ComparisonContainer selectedArray={mockArray} />);
+        expect(renderedComparisonContainer.find('Card').length).toEqual(1);
+    });
+
+    it('Comparison Container should have two Cards if array is full', () => {
         mockArray = [ {}, {} ];
         renderedComparisonContainer = shallow(<ComparisonContainer selectedArray={mockArray} />)
-        console.log(renderedComparisonContainer.debug())
         expect(renderedComparisonContainer.find('Card').length).toEqual(2);
     });
 })
