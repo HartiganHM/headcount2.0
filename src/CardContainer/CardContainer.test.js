@@ -9,7 +9,7 @@ describe('Card Container Tests', () => {
   let renderedCardContainer;
   let mockData;
   let mockFunc;
-  let mockArray;
+  let fakeArray;
 
   beforeEach(() => {
     mockData = {
@@ -17,7 +17,7 @@ describe('Card Container Tests', () => {
       ADAMSCOUNTY: { location: 'ADAMS COUNTY', data: { 2005: 0.6 } }
     };
     mockFunc = jest.fn();
-    mockArray = [
+    fakeArray = [
       { location: 'yuma', data: { 2005: 0.8 } },
       { location: 'denver', data: { 2005: 0.6 } }
     ];
@@ -26,7 +26,7 @@ describe('Card Container Tests', () => {
         data={mockData}
         selectCard={mockFunc}
         removeCard={mockFunc}
-        selectedArray={mockArray}
+        selectedArray={fakeArray}
       />
     );
   });
@@ -40,23 +40,48 @@ describe('Card Container Tests', () => {
   });
 
   it('CardContainer should render Cards', () => {
-    // renderedCardContainer = mount(<CardContainer
-    //   data={mockData}
-    //   selectCard={mockFunc}
-    //   removeCard={mockFunc}
-    //   selectedArray={mockArray}
-    // />)
-    console.log(renderedCardContainer.debug());
-    console.log(renderedCardContainer.find('Card').length);
-    // expect(renderedCardContainer.find('Card').length).toEqual(2);
+    expect(renderedCardContainer.find('Card').length).toEqual(2);
 
     mockData = new DistrictRepository(importedData);
-    renderedCardContainer = shallow(<CardContainer data={mockData} />);
+    renderedCardContainer = shallow(
+      <CardContainer
+        data={mockData.data}
+        selectCard={mockFunc}
+        removeCard={mockFunc}
+        selectedArray={fakeArray}
+      />
+    );
 
     const expectedLength = 181;
 
-    console.log(renderedCardContainer.debug());
+    expect(renderedCardContainer.find('Card').length).toEqual(expectedLength);
+  });
 
-    // expect(renderedCardContainer.find('Card').length).toEqual(expectedLength);
+  it('CardContainer should have two Card classes if a displayed card is in the selected array', () => {
+    renderedCardContainer = mount(<CardContainer
+      data={mockData}
+      selectCard={mockFunc}
+      removeCard={mockFunc}
+      selectedArray={fakeArray}
+    />);
+
+    expect(renderedCardContainer.find('.card').length).toEqual(2);
+    expect(renderedCardContainer.find('.card selected').length).toEqual(0);
+
+    fakeArray = [
+      { location: 'colorado', data: { 2005: 0.8} },
+      { location: 'denver', data: { 2005: 0.6 } }
+    ];
+
+    renderedCardContainer = mount(<CardContainer
+      data={mockData}
+      selectCard={mockFunc}
+      removeCard={mockFunc}
+      selectedArray={fakeArray}
+    />);
+
+    expect(renderedCardContainer.find('.card').length).toEqual(2);
+    expect(renderedCardContainer.find('.selected').length).toEqual(1);
   });
 });
+

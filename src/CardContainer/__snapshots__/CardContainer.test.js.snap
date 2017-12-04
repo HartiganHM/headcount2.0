@@ -21,7 +21,22 @@ ShallowWrapper {
     }
     removeCard={[Function]}
     selectCard={[Function]}
-    selectedArray={Array []} />,
+    selectedArray={
+        Array [
+            Object {
+              "data": Object {
+                "2005": 0.8,
+              },
+              "location": "yuma",
+            },
+            Object {
+              "data": Object {
+                "2005": 0.6,
+              },
+              "location": "denver",
+            },
+          ]
+    } />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
