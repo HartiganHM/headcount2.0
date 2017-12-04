@@ -14,7 +14,7 @@ describe('Card Tests', () => {
     mockData = { 2007: 0.88 };
     mockFunc = jest.fn();
     mockType = 'card';
-    let { district, data } = mockData;
+
     renderedCard = shallow(
       <Card
         district={mockDistrict}
