@@ -1,14 +1,16 @@
-exports[`Card Tests should match the snapshot 1`] = `
+exports[`Card Tests Card should match the snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
+    clickFunction={[Function]}
     data={
         Object {
             "2007": 0.88,
           }
     }
-    district="place" />,
+    district="colorado"
+    type="card" />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -24,19 +26,26 @@ ShallowWrapper {
       "children": Array [
         <span
           className="district-name">
-          place
+          colorado
 </span>,
         <ul
           className="district-data">
           <li
-                    className="greaterThan">
-                    2007
-                    : 
-                    0.88
+                    className="high-score">
+                    <span>
+                              <i
+                                        aria-hidden="true"
+                                        className="icon-pencil" />
+                              2007
+                              : 
+                              0.88
+                    </span>
           </li>
 </ul>,
       ],
       "className": "card",
+      "id": "colorado",
+      "onClick": [Function],
     },
     "ref": null,
     "rendered": Array [
@@ -45,11 +54,11 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "place",
+          "children": "colorado",
           "className": "district-name",
         },
         "ref": null,
-        "rendered": "place",
+        "rendered": "colorado",
         "type": "span",
       },
       Object {
@@ -59,10 +68,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <li
-              className="greaterThan">
-              2007
-              : 
-              0.88
+              className="high-score">
+              <span>
+                            <i
+                                          aria-hidden="true"
+                                          className="icon-pencil" />
+                            2007
+                            : 
+                            0.88
+              </span>
 </li>,
           ],
           "className": "district-data",
@@ -74,19 +88,51 @@ ShallowWrapper {
             "key": "2007",
             "nodeType": "host",
             "props": Object {
-              "children": Array [
+              "children": <span>
+                <i
+                                aria-hidden="true"
+                                className="icon-pencil" />
+                2007
+                : 
+                0.88
+</span>,
+              "className": "high-score",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <i
+                    aria-hidden="true"
+                    className="icon-pencil" />,
+                  "2007",
+                  ": ",
+                  0.88,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "aria-hidden": "true",
+                    "className": "icon-pencil",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "i",
+                },
                 "2007",
                 ": ",
                 0.88,
               ],
-              "className": "greaterThan",
+              "type": "span",
             },
-            "ref": null,
-            "rendered": Array [
-              "2007",
-              ": ",
-              0.88,
-            ],
             "type": "li",
           },
         ],
@@ -104,19 +150,26 @@ ShallowWrapper {
         "children": Array [
           <span
             className="district-name">
-            place
+            colorado
 </span>,
           <ul
             className="district-data">
             <li
-                        className="greaterThan">
-                        2007
-                        : 
-                        0.88
+                        className="high-score">
+                        <span>
+                                    <i
+                                                aria-hidden="true"
+                                                className="icon-pencil" />
+                                    2007
+                                    : 
+                                    0.88
+                        </span>
             </li>
 </ul>,
         ],
         "className": "card",
+        "id": "colorado",
+        "onClick": [Function],
       },
       "ref": null,
       "rendered": Array [
@@ -125,11 +178,11 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "place",
+            "children": "colorado",
             "className": "district-name",
           },
           "ref": null,
-          "rendered": "place",
+          "rendered": "colorado",
           "type": "span",
         },
         Object {
@@ -139,10 +192,15 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <li
-                className="greaterThan">
-                2007
-                : 
-                0.88
+                className="high-score">
+                <span>
+                                <i
+                                                aria-hidden="true"
+                                                className="icon-pencil" />
+                                2007
+                                : 
+                                0.88
+                </span>
 </li>,
             ],
             "className": "district-data",
@@ -154,19 +212,51 @@ ShallowWrapper {
               "key": "2007",
               "nodeType": "host",
               "props": Object {
-                "children": Array [
+                "children": <span>
+                  <i
+                                    aria-hidden="true"
+                                    className="icon-pencil" />
+                  2007
+                  : 
+                  0.88
+</span>,
+                "className": "high-score",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <i
+                      aria-hidden="true"
+                      className="icon-pencil" />,
+                    "2007",
+                    ": ",
+                    0.88,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "aria-hidden": "true",
+                      "className": "icon-pencil",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "i",
+                  },
                   "2007",
                   ": ",
                   0.88,
                 ],
-                "className": "greaterThan",
+                "type": "span",
               },
-              "ref": null,
-              "rendered": Array [
-                "2007",
-                ": ",
-                0.88,
-              ],
               "type": "li",
             },
           ],

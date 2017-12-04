@@ -5,8 +5,37 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <CardContainer
     data={
         Object {
-            "data": Object {},
+            "ADAMSCOUNTY": Object {
+              "data": Object {
+                "2005": 0.6,
+              },
+              "location": "ADAMS COUNTY",
+            },
+            "colorado": Object {
+              "data": Object {
+                "2005": 0.8,
+              },
+              "location": "colorado",
+            },
           }
+    }
+    removeCard={[Function]}
+    selectCard={[Function]}
+    selectedArray={
+        Array [
+            Object {
+              "data": Object {
+                "2005": 0.8,
+              },
+              "location": "yuma",
+            },
+            Object {
+              "data": Object {
+                "2005": 0.6,
+              },
+              "location": "denver",
+            },
+          ]
     } />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -22,8 +51,23 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Card
-          data={undefined}
-          district={undefined} />,
+          clickFunction={[Function]}
+          data={
+                    Object {
+                              "2005": 0.8,
+                            }
+          }
+          district="colorado"
+          type="card" />,
+        <Card
+          clickFunction={[Function]}
+          data={
+                    Object {
+                              "2005": 0.6,
+                            }
+          }
+          district="ADAMS COUNTY"
+          type="card" />,
       ],
       "className": "card-container",
     },
@@ -31,11 +75,31 @@ ShallowWrapper {
     "rendered": Array [
       Object {
         "instance": null,
-        "key": undefined,
+        "key": "colorado",
         "nodeType": "function",
         "props": Object {
-          "data": undefined,
-          "district": undefined,
+          "clickFunction": [Function],
+          "data": Object {
+            "2005": 0.8,
+          },
+          "district": "colorado",
+          "type": "card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "ADAMS COUNTY",
+        "nodeType": "function",
+        "props": Object {
+          "clickFunction": [Function],
+          "data": Object {
+            "2005": 0.6,
+          },
+          "district": "ADAMS COUNTY",
+          "type": "card",
         },
         "ref": null,
         "rendered": null,
@@ -52,8 +116,23 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            data={undefined}
-            district={undefined} />,
+            clickFunction={[Function]}
+            data={
+                        Object {
+                                    "2005": 0.8,
+                                  }
+            }
+            district="colorado"
+            type="card" />,
+          <Card
+            clickFunction={[Function]}
+            data={
+                        Object {
+                                    "2005": 0.6,
+                                  }
+            }
+            district="ADAMS COUNTY"
+            type="card" />,
         ],
         "className": "card-container",
       },
@@ -61,11 +140,31 @@ ShallowWrapper {
       "rendered": Array [
         Object {
           "instance": null,
-          "key": undefined,
+          "key": "colorado",
           "nodeType": "function",
           "props": Object {
-            "data": undefined,
-            "district": undefined,
+            "clickFunction": [Function],
+            "data": Object {
+              "2005": 0.8,
+            },
+            "district": "colorado",
+            "type": "card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "ADAMS COUNTY",
+          "nodeType": "function",
+          "props": Object {
+            "clickFunction": [Function],
+            "data": Object {
+              "2005": 0.6,
+            },
+            "district": "ADAMS COUNTY",
+            "type": "card",
           },
           "ref": null,
           "rendered": null,

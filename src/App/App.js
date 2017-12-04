@@ -4,7 +4,7 @@ import schoolData from '../../data/kindergartners_in_full_day_program.js';
 import '../../fontello-d4ecff93/css/fontello.css';
 import './App.css';
 
-import Comparison from '../Comparison/Comparison';
+import ComparisonContainer from '../ComparisonContainer/ComparisonContainer';
 import Search from '../Search/Search';
 import CardContainer from '../CardContainer/CardContainer';
 
@@ -45,45 +45,60 @@ class App extends Component {
 
   removeCard(card) {
     let clickedCard = this.state.data[card];
-    let selected = this.state.selected.filter( (card) => {
-      return card !== clickedCard
-    })
-    let comparedData = {}
+    let selected = this.state.selected.filter(card => {
+      return card !== clickedCard;
+    });
+    let comparedData = {};
 
-    this.setState({selected, comparedData})
+    this.setState({ selected, comparedData });
   }
 
   compareData() {
     if (this.state.selected.length === 2) {
-      let comparedData = this.helper.compareDistrictAverages(this.state.selected[0].location, this.state.selected[1].location);
+      let comparedData = this.helper.compareDistrictAverages(
+        this.state.selected[0].location,
+        this.state.selected[1].location
+      );
 
-      this.setState({ comparedData })
+      this.setState({ comparedData });
     }
   }
 
   render() {
-    return (
-      <div className="app">
-        <span className="header"><i className='icon-book'></i>Headcount 2<i className='icon-book dot'></i>0</span>
-        <Comparison
-          selectedArray={this.state.selected}
-          removeCard={this.removeCard}
-          comparedData={this.state.comparedData}/>
-        <Search filterCards={this.filterData} />
-        <CardContainer
-          data={this.state.data}
-          selectCard={this.selectCard}
-          removeCard={this.removeCard}
-          selectedArray={this.state.selected}/>
-        <footer className="footer">
-          <a
-            href='https://github.com/HartiganHM/headcount2.0'
-            className='footer-link'>
-              <i className='icon-github-circled'></i>Developed by Matt Renn and Hugh Hartigan
-          </a>
-        </footer>
-      </div>
-    );
+    if (this.state.data) {
+      return (
+        <div className="app">
+          <span className="header">
+            <i className="icon-book" aria-hidden="true" />Headcount 2<i
+              className="icon-book dot"
+              aria-hidden="true"
+            />0
+          </span>
+          <ComparisonContainer
+            selectedArray={this.state.selected}
+            removeCard={this.removeCard}
+            comparedData={this.state.comparedData}
+          />
+          <Search filterCards={this.filterData} />
+          <CardContainer
+            data={this.state.data}
+            selectCard={this.selectCard}
+            removeCard={this.removeCard}
+            selectedArray={this.state.selected}
+          />
+          <footer className="footer">
+            <a
+              href="https://github.com/HartiganHM/headcount2.0"
+              className="footer-link"
+            >
+              <i className="icon-github-circled" />Developed by Matt Renn and
+              Hugh Hartigan
+            </a>
+          </footer>
+        </div>
+      );
+    }
+    return null;
   }
 }
 

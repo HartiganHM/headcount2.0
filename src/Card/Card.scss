@@ -1,5 +1,4 @@
 @import '../variables.scss';
-
 .card {
     align-items: stretch;
     border: 1px solid $main-color-dark;
@@ -15,11 +14,9 @@
     text-align: center;
     max-width: 12rem;
     min-width: 12rem;
-
     &:hover {
         background-color: $selected;
     }
-
     .district-name {
         color: $white;
         background-color: $accent-color;
@@ -28,31 +25,25 @@
         height: 4rem;
         padding: 1rem;
     }
-
     .district-data {
         align-self: center;
         font-size: 0.8rem;
         text-align: left;
         padding: 1rem;
-
         .icon-pencil {
             height: 0.5rem;
             margin-right: 0.5rem;
             margin-left: -1rem;
         }
-
         .high-score {
             color: $high-score;
         }
-
         .mid-high-score {
             color: $mid-high-score;
         }
-
         .mid-low-score {
             color: $mid-low-score;
         }
-
         .low-score {
             color: $low-score;
         }

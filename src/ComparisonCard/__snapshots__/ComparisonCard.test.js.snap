@@ -1,0 +1,216 @@
+exports[`Comparison Card Tests Comparison Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ComparisonCard
+    comparedData={Object {}} />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className="district-data">
+          Pick two districts
+</span>,
+        <span
+          className="comparison-data">
+          <i
+                    className="icon-left-big" />
+          -
+          <i
+                    className="icon-right-big" />
+</span>,
+        <span
+          className="district-data">
+          to compare statistics
+</span>,
+      ],
+      "className": "comparison-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Pick two districts",
+          "className": "district-data",
+        },
+        "ref": null,
+        "rendered": "Pick two districts",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <i
+              className="icon-left-big" />,
+            "-",
+            <i
+              className="icon-right-big" />,
+          ],
+          "className": "comparison-data",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "icon-left-big",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+          "-",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "icon-right-big",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "i",
+          },
+        ],
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "to compare statistics",
+          "className": "district-data",
+        },
+        "ref": null,
+        "rendered": "to compare statistics",
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className="district-data">
+            Pick two districts
+</span>,
+          <span
+            className="comparison-data">
+            <i
+                        className="icon-left-big" />
+            -
+            <i
+                        className="icon-right-big" />
+</span>,
+          <span
+            className="district-data">
+            to compare statistics
+</span>,
+        ],
+        "className": "comparison-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Pick two districts",
+            "className": "district-data",
+          },
+          "ref": null,
+          "rendered": "Pick two districts",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <i
+                className="icon-left-big" />,
+              "-",
+              <i
+                className="icon-right-big" />,
+            ],
+            "className": "comparison-data",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "icon-left-big",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+            "-",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "icon-right-big",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "i",
+            },
+          ],
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "to compare statistics",
+            "className": "district-data",
+          },
+          "ref": null,
+          "rendered": "to compare statistics",
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;

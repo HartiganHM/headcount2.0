@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700");
-.comparison {
+.comparison-container {
   display: flex;
   justify-content: center; }
-  .comparison .district {
+  .comparison-container .district {
     border: 1px dashed #6D6E71;
     border-radius: 1rem;
     height: 18rem;
