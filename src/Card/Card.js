@@ -5,7 +5,17 @@ import './Card.css';
 
 const Card = ({ district, data, clickFunction, type }) => {
   const districtData = Object.keys(data).map(year => {
-    const dataClass = data[year] > 0.5 ? 'greaterThan' : 'lessThan';
+    let dataClass;
+
+    if( data[year] >= 0.75 ) {
+      dataClass = 'high-score';
+    } else if ( data[year] < 0.75 && data[year] >= 0.5 ) {
+      dataClass = 'mid-high-score';
+    } else if ( data[year] < 0.5 && data[year] >= 0.25 ) {
+      dataClass = 'mid-low-score';
+    } else {
+      dataClass = 'low-score'
+    }
 
     return (
       <li key={year} className={dataClass}>
