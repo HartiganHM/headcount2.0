@@ -1,1 +1,170 @@
-exports[`Card Container Tests CardContainer should match the snapshot 1`] = `undefined`;
+exports[`Card Container Tests CardContainer should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CardContainer
+    data={
+        Object {
+            "ADAMSCOUNTY": Object {
+              "data": Object {
+                "2005": 0.6,
+              },
+              "location": "ADAMS COUNTY",
+            },
+            "colorado": Object {
+              "data": Object {
+                "2005": 0.8,
+              },
+              "location": "colorado",
+            },
+          }
+    }
+    removeCard={[Function]}
+    selectCard={[Function]}
+    selectedArray={Array []} />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Card
+          clickFunction={[Function]}
+          data={
+                    Object {
+                              "2005": 0.8,
+                            }
+          }
+          district="colorado"
+          type="card" />,
+        <Card
+          clickFunction={[Function]}
+          data={
+                    Object {
+                              "2005": 0.6,
+                            }
+          }
+          district="ADAMS COUNTY"
+          type="card" />,
+      ],
+      "className": "card-container",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "colorado",
+        "nodeType": "function",
+        "props": Object {
+          "clickFunction": [Function],
+          "data": Object {
+            "2005": 0.8,
+          },
+          "district": "colorado",
+          "type": "card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "ADAMS COUNTY",
+        "nodeType": "function",
+        "props": Object {
+          "clickFunction": [Function],
+          "data": Object {
+            "2005": 0.6,
+          },
+          "district": "ADAMS COUNTY",
+          "type": "card",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Card
+            clickFunction={[Function]}
+            data={
+                        Object {
+                                    "2005": 0.8,
+                                  }
+            }
+            district="colorado"
+            type="card" />,
+          <Card
+            clickFunction={[Function]}
+            data={
+                        Object {
+                                    "2005": 0.6,
+                                  }
+            }
+            district="ADAMS COUNTY"
+            type="card" />,
+        ],
+        "className": "card-container",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "colorado",
+          "nodeType": "function",
+          "props": Object {
+            "clickFunction": [Function],
+            "data": Object {
+              "2005": 0.8,
+            },
+            "district": "colorado",
+            "type": "card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "ADAMS COUNTY",
+          "nodeType": "function",
+          "props": Object {
+            "clickFunction": [Function],
+            "data": Object {
+              "2005": 0.6,
+            },
+            "district": "ADAMS COUNTY",
+            "type": "card",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactFifteenAdapter {
+      "options": Object {
+        "supportPrevContextArgumentOfComponentDidUpdate": true,
+      },
+    },
+  },
+}
+`;
