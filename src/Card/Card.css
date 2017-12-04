@@ -28,9 +28,13 @@
       height: 0.5rem;
       margin-right: 0.5rem;
       margin-left: -1rem; }
-    .card .district-data .greaterThan {
+    .card .district-data .high-score {
       color: #00cc44; }
-    .card .district-data .lessThan {
+    .card .district-data .mid-high-score {
+      color: #e2cc00; }
+    .card .district-data .mid-low-score {
+      color: #df9400; }
+    .card .district-data .low-score {
       color: #a10000; }
 
 .selected {

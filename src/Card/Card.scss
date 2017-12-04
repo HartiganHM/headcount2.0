@@ -35,11 +35,19 @@
             margin-left: -1rem;
         }
 
-        .greaterThan {
+        .high-score {
             color: $high-score;
         }
 
-        .lessThan {
+        .mid-high-score {
+            color: $mid-high-score;
+        }
+
+        .mid-low-score {
+            color: $mid-low-score;
+        }
+
+        .low-score {
             color: $low-score;
         }
     }
