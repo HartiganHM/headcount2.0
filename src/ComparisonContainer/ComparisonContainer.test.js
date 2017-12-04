@@ -1,44 +1,48 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import ComparisonContainer from './ComparisonContainer';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 
 describe('ComparisonContainer Tests', () => {
-    let renderedComparisonContainer;
-    let mockObject;
-    let mockArray;
-    let mockFunc;
+  let renderedComparisonContainer;
+  let mockObject;
+  let mockArray;
 
-    beforeEach( () => {
-        mockArray = [];
-        mockObject = {};
-        renderedComparisonContainer = shallow(<ComparisonContainer
-                                        selectedArray={mockArray}
-                                        comparedData={mockObject}
-                                    />)
-    })
+  beforeEach(() => {
+    mockArray = [];
+    mockObject = {};
+    renderedComparisonContainer = shallow(
+      <ComparisonContainer
+        selectedArray={mockArray}
+        comparedData={mockObject}
+      />
+    );
+  });
 
-    it('Comparison Container should exist', () => {
-        expect(renderedComparisonContainer).toBeDefined();
-    });
+  it('Comparison Container should exist', () => {
+    expect(renderedComparisonContainer).toBeDefined();
+  });
 
-    it('Comparison Container should match the snapshot', () => {
-        expect(renderedComparisonContainer).toMatchSnapshot();
-    });
+  it('Comparison Container should match the snapshot', () => {
+    expect(renderedComparisonContainer).toMatchSnapshot();
+  });
 
-    it('Comparison Container should have no Cards if array is empty', () => {
-        expect(renderedComparisonContainer.find('Card').length).toEqual(0);
-    });
+  it('Comparison Container should have no Cards if array is empty', () => {
+    expect(renderedComparisonContainer.find('Card').length).toEqual(0);
+  });
 
-    it('Comparison Container should have one Cards if array is full', () => {
-        mockArray = [ {} ];
-        renderedComparisonContainer = shallow(<ComparisonContainer selectedArray={mockArray} />);
-        expect(renderedComparisonContainer.find('Card').length).toEqual(1);
-    });
+  it('Comparison Container should have one Cards if array is full', () => {
+    mockArray = [{}];
+    renderedComparisonContainer = shallow(
+      <ComparisonContainer selectedArray={mockArray} />
+    );
+    expect(renderedComparisonContainer.find('Card').length).toEqual(1);
+  });
 
-    it('Comparison Container should have two Cards if array is full', () => {
-        mockArray = [ {}, {} ];
-        renderedComparisonContainer = shallow(<ComparisonContainer selectedArray={mockArray} />)
-        expect(renderedComparisonContainer.find('Card').length).toEqual(2);
-    });
-})
+  it('Comparison Container should have two Cards if array is full', () => {
+    mockArray = [{}, {}];
+    renderedComparisonContainer = shallow(
+      <ComparisonContainer selectedArray={mockArray} />
+    );
+    expect(renderedComparisonContainer.find('Card').length).toEqual(2);
+  });
+});

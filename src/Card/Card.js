@@ -7,27 +7,30 @@ const Card = ({ district, data, clickFunction, type }) => {
   const districtData = Object.keys(data).map(year => {
     let dataClass;
 
-    if( data[year] >= 0.75 ) {
+    if (data[year] >= 0.75) {
       dataClass = 'high-score';
-    } else if ( data[year] < 0.75 && data[year] >= 0.5 ) {
+    } else if (data[year] < 0.75 && data[year] >= 0.5) {
       dataClass = 'mid-high-score';
-    } else if ( data[year] < 0.5 && data[year] >= 0.25 ) {
+    } else if (data[year] < 0.5 && data[year] >= 0.25) {
       dataClass = 'mid-low-score';
     } else {
-      dataClass = 'low-score'
+      dataClass = 'low-score';
     }
 
     return (
       <li key={year} className={dataClass}>
-        <span><i className='icon-pencil'></i>{year}: {data[year]}</span>
+        <span>
+          <i className="icon-pencil" />
+          {year}: {data[year]}
+        </span>
       </li>
     );
   });
 
   return (
-    <div className={ type } id={district} onClick={() => clickFunction(district)}>
-      <span className='district-name'>{district}</span>
-      <ul className='district-data'>{districtData}</ul>
+    <div className={type} id={district} onClick={() => clickFunction(district)}>
+      <span className="district-name">{district}</span>
+      <ul className="district-data">{districtData}</ul>
     </div>
   );
 };

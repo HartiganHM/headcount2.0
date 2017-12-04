@@ -22,24 +22,22 @@ class Search extends Component {
 
   render() {
     return (
-      <div className='search'>
-        <i
-          aria-hidden='true'
-          className='icon-search'></i>
+      <div className="search">
+        <i aria-hidden="true" className="icon-search" />
         <input
-          className='search-input'
-          type='text'
-          placeholder='Search for a district'
+          className="search-input"
+          type="text"
+          placeholder="Search for a district"
           value={this.state.value}
           onChange={this.handleChange}
         />
       </div>
     );
   }
-};
+}
 
 Search.propTypes = {
-  filterCards: PropTypes.func,
+  filterCards: PropTypes.func
 };
 
 export default Search;
