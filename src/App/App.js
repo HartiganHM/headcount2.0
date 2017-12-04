@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DistrictRepository from '../helper';
 import schoolData from '../../data/kindergartners_in_full_day_program.js';
+import '../../fontello-d4ecff93/css/fontello.css';
 import './App.css';
 
 import Comparison from '../Comparison/Comparison';
@@ -63,7 +64,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <span className="header">Headcount 2.0</span>
+        <span className="header"><i className='icon-book'></i>Headcount 2<i className='icon-book dot'></i>0</span>
         <Comparison
           selectedArray={this.state.selected}
           removeCard={this.removeCard}
@@ -75,7 +76,11 @@ class App extends Component {
           removeCard={this.removeCard}
           selectedArray={this.state.selected}/>
         <footer className="footer">
-          Developed by Matt Renn and Hugh Hartigan
+          <a
+            href='https://github.com/HartiganHM/headcount2.0'
+            className='footer-link'>
+              <i className='icon-github-circled'></i>Developed by Matt Renn and Hugh Hartigan
+          </a>
         </footer>
       </div>
     );

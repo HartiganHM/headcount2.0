@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700");
+.comparison-card {
+  align-items: stretch;
+  border: 1px solid #6D6E71;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.2rem #6D6E71;
+  box-sizing: border-box;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  height: 18rem;
+  overflow: hidden;
+  justify-content: space-between;
+  margin: 1rem;
+  text-align: center;
+  max-width: 12rem;
+  min-width: 12rem; }
+  .comparison-card .district-data, .comparison-card .comparison-data {
+    box-sizing: border-box;
+    height: 4rem;
+    padding: 1rem; }
+  .comparison-card .district-data {
+    color: #FFF;
+    background-color: #029fb4;
+    font-size: 1rem; }
+  .comparison-card .comparison-data {
+    color: #00cc44;
+    font-size: 0.8rem; }

@@ -3,10 +3,21 @@
   display: flex;
   flex-direction: column;
   font-family: "Open Sans", sans-serif; }
-  .app .header {
-    background-color: #00A79D;
+  .app .header, .app .footer {
+    background-color: #029fb4;
     color: #FFF;
-    font-family: "Roboto Slab", serif;
-    font-size: 6.4rem;
     padding: 1.2rem;
     text-align: center; }
+    .app .header .dot, .app .footer .dot {
+      font-size: 1rem;
+      margin: 0; }
+  .app .header {
+    font-family: "Roboto Slab", serif;
+    font-size: 6.4rem; }
+  .app .footer {
+    font-size: 1.2rem; }
+    .app .footer .footer-link {
+      color: #000;
+      text-decoration: none; }
+      .app .footer .footer-link:hover {
+        color: #FFF; }
