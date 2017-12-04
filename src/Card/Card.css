@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab:700");
 .card {
   align-items: stretch;
-  border: 1px solid gray;
+  border: 1px solid #6D6E71;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.2rem #6D6E71;
+  box-sizing: border-box;
+  cursor: default;
   display: flex;
   flex-direction: column;
   height: 18rem;
@@ -12,9 +14,11 @@
   text-align: center;
   max-width: 12rem;
   min-width: 12rem; }
+  .card:hover {
+    background-color: rgba(0, 251, 255, 0.09); }
   .card .district-name {
     color: #FFF;
-    background-color: #00A79D;
+    background-color: #029fb4;
     box-sizing: border-box;
     font-size: 1.2rem;
     height: 4rem;
@@ -24,11 +28,19 @@
     font-size: 0.8rem;
     text-align: left;
     padding: 1rem; }
-    .card .district-data .greaterThan {
+    .card .district-data .icon-pencil {
+      height: 0.5rem;
+      margin-right: 0.5rem;
+      margin-left: -1rem; }
+    .card .district-data .high-score {
       color: #00cc44; }
-    .card .district-data .lessThan {
+    .card .district-data .mid-high-score {
+      color: #e2cc00; }
+    .card .district-data .mid-low-score {
+      color: #df9400; }
+    .card .district-data .low-score {
       color: #a10000; }
 
 .selected {
-  background-color: rgba(0, 197, 0, 0.37); }
-
+  background-color: rgba(0, 251, 255, 0.09);
+  border: 2px solid #00e7d8; }

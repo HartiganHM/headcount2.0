@@ -1,0 +1,36 @@
+@import '../variables.scss';
+
+.comparison-card {
+    align-items: stretch;
+    border: 1px solid $main-color-dark;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.2rem $main-color-dark;
+    box-sizing: border-box;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    height: 18rem;
+    overflow: hidden;
+    justify-content: space-between;
+    margin: 1rem;
+    text-align: center;
+    max-width: 12rem;
+    min-width: 12rem;
+
+    .district-data, .comparison-data {
+        box-sizing: border-box;
+        height: 4rem;
+        padding: 1rem;
+    }
+
+    .district-data {
+        color: $white;
+        background-color: $accent-color;
+        font-size: 1rem;
+    }
+
+    .comparison-data {
+        color: $high-score;
+        font-size: 0.8rem;
+    }
+}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import icon from '../Images/search.svg';
+import icon from '../Icons/search.svg';
+import '../../fontello-d4ecff93/css/fontello.css';
 import './Search.css';
 
 class Search extends Component {
@@ -22,7 +23,9 @@ class Search extends Component {
   render() {
     return (
       <div className='search'>
-        <img src={icon} alt='magnifying-glass-icon' className='search-icon' />
+        <i
+          aria-hidden='true'
+          className='icon-search'></i>
         <input
           className='search-input'
           type='text'
