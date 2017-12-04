@@ -15,9 +15,7 @@ const ComparisonCard = ({ comparedData }) => {
   const district2 = keys.length
     ? `${keys[1]}: ${data[1]}`
     : 'to compare statistics';
-  const comparison = keys.length
-    ? `${keys[2]}: ${data[2]}`
-    : '-';
+  const comparison = keys.length ? `${keys[2]}: ${data[2]}` : '-';
 
   return (
     <div className="comparison-card">
