@@ -68,7 +68,7 @@ class App extends Component {
     return (
       <div className="app">
         <span className="header">
-          <i className="icon-book" />Headcount 2<i className="icon-book dot" />0
+          <i className="icon-book" aria-hidden="true" />Headcount 2<i className="icon-book dot" aria-hidden="true"/>0
         </span>
         <ComparisonContainer
           selectedArray={this.state.selected}

@@ -20,7 +20,7 @@ const Card = ({ district, data, clickFunction, type }) => {
     return (
       <li key={year} className={dataClass}>
         <span>
-          <i className="icon-pencil" />
+          <i className="icon-pencil" aria-hidden="true"/>
           {year}: {data[year]}
         </span>
       </li>
