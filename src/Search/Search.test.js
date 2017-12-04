@@ -20,8 +20,6 @@ describe('Search Tests', () => {
   });
 
   it('Search should fire filterCards with change', () => {
-    let input = renderedSearch.find('.search-input');
-
     renderedSearch
       .find('.search-input')
       .simulate('change', { target: { value: 'abc' } });
