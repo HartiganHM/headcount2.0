@@ -4,6 +4,8 @@
   border: 1px solid #6D6E71;
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.2rem #6D6E71;
+  box-sizing: border-box;
+  cursor: default;
   display: flex;
   flex-direction: column;
   height: 18rem;
