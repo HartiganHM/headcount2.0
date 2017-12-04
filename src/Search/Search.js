@@ -1,40 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import '../../fontello-d4ecff93/css/fontello.css';
 import './Search.css';
 
-class Search extends Component {
-  constructor() {
-    super();
-    this.state = {
-      value: ''
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  handleChange(event) {
-    let value = event.target.value;
-
-    this.props.filterCards(value);
-    this.setState({ value });
-  }
-
-  render() {
-    return (
-      <div className="search">
-        <i aria-hidden="true" className="icon-search" />
-        <input
-          className="search-input"
-          type="text"
-          placeholder="Search for a district"
-          value={this.state.value}
-          onChange={this.handleChange}
-        />
-      </div>
-    );
-  }
-}
+const Search = ({ filterCards }) => {
+  return (
+    <div className="search">
+      <i aria-hidden="true" className="icon-search" />
+      <input
+        className="search-input"
+        type="text"
+        placeholder="Search for a district"
+        onChange={e => filterCards(e.target.value)}
+      />
+    </div>
+  );
+};
 
 Search.propTypes = {
   filterCards: PropTypes.func
