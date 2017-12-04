@@ -35,7 +35,10 @@ const CardContainer = ({ data, selectCard, removeCard, selectedArray }) => {
 };
 
 CardContainer.propTypes = {
-  data: PropTypes.object
+  data: PropTypes.object,
+  selectCard: PropTypes.func,
+  removeCard: PropTypes.func,
+  selectedArray: PropTypes.array
 };
 
 export default CardContainer;
