@@ -34,7 +34,9 @@ const Card = ({ district, data, clickFunction, type }) => {
 
 Card.propTypes = {
   district: PropTypes.string,
-  data: PropTypes.object
+  data: PropTypes.object,
+  clickFunction: PropTypes.func,
+  type: PropTypes.string
 };
 
 export default Card;
