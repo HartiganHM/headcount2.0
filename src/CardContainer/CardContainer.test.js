@@ -1,6 +1,5 @@
 import React from 'react';
 import CardContainer from './CardContainer';
-import Card from '../Card/Card';
 import { shallow, mount } from 'enzyme';
 import DistrictRepository from '../helper';
 import importedData from '../../data/kindergartners_in_full_day_program.js';
@@ -58,30 +57,33 @@ describe('Card Container Tests', () => {
   });
 
   it('CardContainer should have two Card classes if a displayed card is in the selected array', () => {
-    renderedCardContainer = mount(<CardContainer
-      data={mockData}
-      selectCard={mockFunc}
-      removeCard={mockFunc}
-      selectedArray={fakeArray}
-    />);
+    renderedCardContainer = mount(
+      <CardContainer
+        data={mockData}
+        selectCard={mockFunc}
+        removeCard={mockFunc}
+        selectedArray={fakeArray}
+      />
+    );
 
     expect(renderedCardContainer.find('.card').length).toEqual(2);
     expect(renderedCardContainer.find('.card selected').length).toEqual(0);
 
     fakeArray = [
-      { location: 'colorado', data: { 2005: 0.8} },
+      { location: 'colorado', data: { 2005: 0.8 } },
       { location: 'denver', data: { 2005: 0.6 } }
     ];
 
-    renderedCardContainer = mount(<CardContainer
-      data={mockData}
-      selectCard={mockFunc}
-      removeCard={mockFunc}
-      selectedArray={fakeArray}
-    />);
+    renderedCardContainer = mount(
+      <CardContainer
+        data={mockData}
+        selectCard={mockFunc}
+        removeCard={mockFunc}
+        selectedArray={fakeArray}
+      />
+    );
 
     expect(renderedCardContainer.find('.card').length).toEqual(2);
     expect(renderedCardContainer.find('.selected').length).toEqual(1);
   });
 });
-
