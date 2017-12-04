@@ -15,7 +15,8 @@
   text-align: center;
   max-width: 12rem;
   min-width: 12rem; }
-  .comparison-card .district-data, .comparison-card .comparison-data {
+  .comparison-card .district-data,
+  .comparison-card .comparison-data {
     box-sizing: border-box;
     height: 4rem;
     padding: 1rem; }

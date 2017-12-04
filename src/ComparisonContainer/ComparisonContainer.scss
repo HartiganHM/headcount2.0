@@ -1,9 +1,7 @@
 @import '../variables.scss';
-
 .comparison-container {
     display: flex;
     justify-content: center;
-
     .district {
         border: 1px dashed $main-color-dark;
         border-radius: 1rem;
