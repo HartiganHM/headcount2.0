@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center; }
   .comparison .district {
-    border: 1px dashed gray;
+    border: 1px dashed #6D6E71;
     border-radius: 1rem;
     height: 18rem;
     overflow: hidden;
