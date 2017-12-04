@@ -4,7 +4,7 @@ import schoolData from '../../data/kindergartners_in_full_day_program.js';
 import '../../fontello-d4ecff93/css/fontello.css';
 import './App.css';
 
-import Comparison from '../Comparison/Comparison';
+import ComparisonContainer from '../ComparisonContainer/ComparisonContainer';
 import Search from '../Search/Search';
 import CardContainer from '../CardContainer/CardContainer';
 
@@ -65,7 +65,7 @@ class App extends Component {
     return (
       <div className="app">
         <span className="header"><i className='icon-book'></i>Headcount 2<i className='icon-book dot'></i>0</span>
-        <Comparison
+        <ComparisonContainer
           selectedArray={this.state.selected}
           removeCard={this.removeCard}
           comparedData={this.state.comparedData}/>
