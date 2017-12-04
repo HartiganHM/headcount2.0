@@ -2,3 +2,6 @@
 .icon-pencil:before { content: '\e800'; } /* '' */
 .icon-left-big:before { content: '\e801'; } /* '' */
 .icon-right-big:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e803'; } /* '' */
+.icon-book:before { content: '\e804'; } /* '' */
+.icon-github-circled:before { content: '\f09b'; } /* '' */
