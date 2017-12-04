@@ -65,34 +65,40 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div className="app">
-        <span className="header">
-          <i className="icon-book" aria-hidden="true" />Headcount 2<i className="icon-book dot" aria-hidden="true"/>0
-        </span>
-        <ComparisonContainer
-          selectedArray={this.state.selected}
-          removeCard={this.removeCard}
-          comparedData={this.state.comparedData}
-        />
-        <Search filterCards={this.filterData} />
-        <CardContainer
-          data={this.state.data}
-          selectCard={this.selectCard}
-          removeCard={this.removeCard}
-          selectedArray={this.state.selected}
-        />
-        <footer className="footer">
-          <a
-            href="https://github.com/HartiganHM/headcount2.0"
-            className="footer-link"
-          >
-            <i className="icon-github-circled" />Developed by Matt Renn and Hugh
-            Hartigan
-          </a>
-        </footer>
-      </div>
-    );
+    if (this.state.data) {
+      return (
+        <div className="app">
+          <span className="header">
+            <i className="icon-book" aria-hidden="true" />Headcount 2<i
+              className="icon-book dot"
+              aria-hidden="true"
+            />0
+          </span>
+          <ComparisonContainer
+            selectedArray={this.state.selected}
+            removeCard={this.removeCard}
+            comparedData={this.state.comparedData}
+          />
+          <Search filterCards={this.filterData} />
+          <CardContainer
+            data={this.state.data}
+            selectCard={this.selectCard}
+            removeCard={this.removeCard}
+            selectedArray={this.state.selected}
+          />
+          <footer className="footer">
+            <a
+              href="https://github.com/HartiganHM/headcount2.0"
+              className="footer-link"
+            >
+              <i className="icon-github-circled" />Developed by Matt Renn and
+              Hugh Hartigan
+            </a>
+          </footer>
+        </div>
+      );
+    }
+    return null;
   }
 }
 
