@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import icon from '../Icons/search.svg';
+import PropTypes from 'prop-types';
 import '../../fontello-d4ecff93/css/fontello.css';
 import './Search.css';
 
@@ -36,6 +37,10 @@ class Search extends Component {
       </div>
     );
   }
-}
+};
+
+Search.propTypes = {
+  filterCards: PropTypes.func,
+};
 
 export default Search;
