@@ -2,9 +2,9 @@ import React from 'react';
 import Card from '../Card/Card';
 import ComparisonCard from '../ComparisonCard/ComparisonCard';
 // import PropTypes from 'prop-types';
-import './Comparison.css';
+import './ComparisonContainer.css';
 
-const Comparison = ({ selectedArray, comparedData, removeCard }) => {
+const ComparisonContainer = ({ selectedArray, comparedData, removeCard }) => {
     let type = 'card selected';
     let placeHolder1 = selectedArray[0] ? '' : 'district';
     let placeHolder2 = selectedArray[1] ? '' : 'district';
@@ -16,7 +16,7 @@ const Comparison = ({ selectedArray, comparedData, removeCard }) => {
     })
 
     return (
-        <div className='comparison'>
+        <div className='comparison-container'>
             <span className={placeHolder1}>{selectedCards[0] || ''}</span>
             <ComparisonCard comparedData={comparedData}/>
             <span className={placeHolder2}>{selectedCards[1] || ''}</span>
@@ -24,4 +24,4 @@ const Comparison = ({ selectedArray, comparedData, removeCard }) => {
     )
 }
 
-export default Comparison;
+export default ComparisonContainer;
