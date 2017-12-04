@@ -22,4 +22,8 @@ const ComparisonCard = ({ comparedData }) => {
     )
 }
 
+ComparisonCard.propTypes = {
+    comparedData: PropTypes.object,
+};
+
 export default ComparisonCard

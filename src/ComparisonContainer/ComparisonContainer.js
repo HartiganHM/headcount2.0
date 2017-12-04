@@ -22,12 +22,12 @@ const ComparisonContainer = ({ selectedArray, comparedData, removeCard }) => {
             <span className={placeHolder2}>{selectedCards[1] || ''}</span>
         </div>
     )
-}
+};
 
-Card.propTypes = {
+ComparisonContainer.propTypes = {
     selectedArray: PropTypes.array,
     comparedData: PropTypes.object,
-    removeCard: PropTypes.func
-  };
+    removeCard: PropTypes.func,
+};
 
 export default ComparisonContainer;
