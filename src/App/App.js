@@ -76,7 +76,11 @@ class App extends Component {
           removeCard={this.removeCard}
           selectedArray={this.state.selected}/>
         <footer className="footer">
-          Developed by Matt Renn and Hugh Hartigan
+          <a
+            href='https://github.com/HartiganHM/headcount2.0'
+            className='footer-link'>
+              <i className='icon-github-circled'></i>Developed by Matt Renn and Hugh Hartigan
+          </a>
         </footer>
       </div>
     );
