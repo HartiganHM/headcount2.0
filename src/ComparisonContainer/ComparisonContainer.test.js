@@ -12,11 +12,9 @@ describe('ComparisonContainer Tests', () => {
     beforeEach( () => {
         mockArray = [];
         mockObject = {};
-        mockFunc = jest.fn();
         renderedComparisonContainer = shallow(<ComparisonContainer
                                         selectedArray={mockArray}
                                         comparedData={mockObject}
-                                        removeCard={mockFunc}
                                     />)
     })
 
@@ -25,6 +23,17 @@ describe('ComparisonContainer Tests', () => {
     });
 
     it('Comparison Container should match the snapshot', () => {
-        
-    })
+        expect(renderedComparisonContainer).toMatchSnapshot();
+    });
+
+    it('Comparison Container should have no Cards if array is empty', () => {
+        expect(renderedComparisonContainer.find('Card').length).toEqual(0);
+    });
+
+    it('Comparison Container should two Cards if array is full', () => {
+        mockArray = [ {}, {} ];
+        renderedComparisonContainer = shallow(<ComparisonContainer selectedArray={mockArray} />)
+        console.log(renderedComparisonContainer.debug())
+        expect(renderedComparisonContainer.find('Card').length).toEqual(2);
+    });
 })
