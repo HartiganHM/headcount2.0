@@ -2,7 +2,7 @@ import React from 'react';
 import ComparisonContainer from './ComparisonContainer';
 import { shallow } from 'enzyme';
 
-describe('ComparisonContainer Tests', () => {
+describe('Comparison Container Tests', () => {
   let renderedComparisonContainer;
   let mockObject;
   let mockArray;
