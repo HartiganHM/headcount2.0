@@ -9,8 +9,7 @@
     padding: 0.5rem; }
     .search .search-input:focus {
       outline: none; }
-  .search .search-icon {
-    height: 1.5rem;
+  .search .icon-search {
+    font-size: 2rem;
     margin: 1rem;
-    margin-left: 0;
-    width: 1.5rem; }
+    margin-left: 0; }
