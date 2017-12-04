@@ -5,17 +5,33 @@
     flex-direction: column;
     font-family: $main-font;
 
-    .header {
+    .header, .footer {
         background-color: $accent-color;
         color: $white;
-        font-family: $accent-font;
-        font-size: 6.4rem;
         padding: 1.2rem;
         text-align: center;
 
         .dot {
             font-size: 1rem;
             margin: 0;
+        }
+    }
+
+    .header {
+        font-family: $accent-font;
+        font-size: 6.4rem;
+    }
+
+    .footer {
+        font-size: 1.2rem;
+
+        .footer-link {
+            color: $black;
+            text-decoration: none;
+
+            &:hover {
+                color: $white;
+            }
         }
     }
 }
