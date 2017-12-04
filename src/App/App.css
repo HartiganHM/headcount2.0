@@ -10,3 +10,6 @@
     font-size: 6.4rem;
     padding: 1.2rem;
     text-align: center; }
+    .app .header .dot {
+      font-size: 1rem;
+      margin: 0; }
